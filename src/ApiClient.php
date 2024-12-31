@@ -14,13 +14,16 @@ class ApiClient
     {
         $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
         $response = file_get_contents($url);
-        return json_decode($response, true);
+        return $response;
     }
 }
 
 /*
 $apiClient = new ApiClient('https://fakestoreapi.com');
 $products = $apiClient->get("/products");
-var_dump($products[0]);
-print($products[0]['title']."\n");
+#Affiche résultat API au format JSON
+print($products . "\n");
+#Transforme le JSON en tableau
+$product_as_array = json_decode($products, true);
+print($product_as_array[0]["title"] . "\n");
 */
