@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Card Lesson</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .title {
+            text-align: center;
+            background-color: grey;
+        }
+
+        .card {
+            height: 120mm;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+
+        .require {
+            background-color: lightgray;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .question-card .question {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .question-card .question p {
+            text-align: center;
+        }
+
+        .savoir-card .savoir {
+            text-align: center;
+        }
+
+        .savoir-card .detail {
+            padding: 1em;
+            text-align: center;
+        }
+
+        .savoir-card .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .savoir-card .source {
+            padding: 1em;
+            text-align: center;
+        }
+
+        .instruction {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .code {
+            text-align: center;
+            word-break: break-all;
+
+        }
+
+        .code .codeTitle {
+            background-color: lightgray;
+            padding: 1em;
+        }
+
+        .code .link a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="questions" class="card-grid"></section>
+        <section id="savoirs" class="card-grid"></section>
+        <section id="missions" class="card-grid"></section>
+    </main>
+</body>
+<script>
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(jsonData => {
+
+            const questions = document.getElementById('questions');
+            jsonData.questionCards.forEach(card => {
+
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question-card', 'card');
+                questionDiv.innerHTML = `
+            <div class="title">
+                    <h1>Question #${card.id}</h1>
+                </div>
+                <div class="require">
+                    <p>Pour répondre à cette question vous avez besoin de la carte ${card.requirement}”.</p>
+                </div>
+                <div class="question">
+                    <p>${card.questionText}</p>
+                </div>
+        `;
+                questions.appendChild(questionDiv);
+            });
+
+
+            const savoirs = document.getElementById('savoirs');
+            jsonData.savoirCards.forEach(card => {
+
+                const savoirDiv = document.createElement('div');
+                savoirDiv.classList.add('savoir-card', 'card');
+                savoirDiv.innerHTML = `
+                    <div class="title">
+                    <h1>Savoir #${card.id}</h1>
+                    </div>
+                    <div class="savoir">
+                        <p>${card.savoir}</p>
+                    </div>
+                    <div class="detail">
+                        <p>${card.detail}</p>
+                    </div>
+                    <div class="video">
+                        <img src="${card.video}" alt="">
+                    </div>
+                    <div class="source">
+                        <a
+                            href="${card.source}">${card.source}</a>
+                    </div>
+                `;
+                savoirs.appendChild(savoirDiv);
+            });
+
+            const missions = document.getElementById('missions');
+            jsonData.missionCards.forEach(card => {
+
+                const missionDiv = document.createElement('div');
+                missionDiv.classList.add('mission-card', 'card');
+                missionDiv.innerHTML = `
+                    <div class="title">
+                        <h1>Mission #${card.id}</h1>
+                    </div>
+                    <div class="require">
+                        <p>Pour réaliser cette mission vous aurez besoin de la carte ${card.requirement}</p>
+                    </div>
+                    <div class="instruction">
+                        <p>${card.instruction}</p>
+                    </div>
+                    <div class="code">
+                        <div class="codeTitle">Lien vers le code</div>
+                        <div class="link">
+                            <a href="${card.link}" target="_blank">${card.link}</a>
+                        </div>
+                    </div>
+                `;
+                missions.appendChild(missionDiv);
+            });
+        })
+</script>
+
+</html>

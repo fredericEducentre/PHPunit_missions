@@ -1,0 +1,164 @@
+{
+    "questionCards": [
+        {
+            "id": 1,
+            "requirement": "'Savoir #1'",
+            "questionText": "Qu’est-ce qu’une assertion dans PHPunit ?"
+        },
+        {
+            "id": 2,
+            "requirement": "'Savoir #2'",
+            "questionText": "Quelle méthode permet de vérifier qu’une valeur est vraie ou fausse ?"
+        },
+        {
+            "id": 3,
+            "requirement": "'Savoir #3'",
+            "questionText": "Quelle méthode vérifie que deux valeurs sont égales ?"
+        },
+        {
+            "id": 4,
+            "requirement": "'Savoir #4'",
+            "questionText": "Quelle méthode vérifie qu’une valeur est une chaîne de caractère ?"
+        },
+        {
+            "id": 5,
+            "requirement": "'Savoir #5'",
+            "questionText": "Quelle méthode vérifie qu’un certains nombre d’éléments sont présents ?"
+        },
+        {
+            "id": 6,
+            "requirement": "'Savoir #6'",
+            "questionText": "Quelle méthode vérifie que deux valeurs sont de même type et égale ?"
+        },
+        {
+            "id": 7,
+            "requirement": "'Savoir #7'",
+            "questionText": "Quelle méthode vérifie qu’un résultat est au format json ?"
+        },
+        {
+            "id": 8,
+            "requirement": "'Savoir #8'",
+            "questionText": "Quelle méthode vérifie qu’un résultat est nul ?"
+        }
+    ],
+    "savoirCards": [
+        {
+            "id": 1,
+            "savoir": "Les assertions",
+            "detail": "Les assertions (ou affirmations) sont des méthodes pour les tests unitaires : elles vérifient qu'une condition est remplie, sinon elle renvoie une erreur.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html"
+        },
+        {
+            "id": 2,
+            "savoir": "méthode assertTrue( ) & assertFalse( )",
+            "detail": "Ces méthodes vérifient qu’une valeur est vraie ou fausse.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#asserttrue"
+        },
+        {
+            "id": 3,
+            "savoir": "méthode assertEquals( )",
+            "detail": "Cette méthode vérifie que deux valeurs sont égales.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertequals"
+        },
+        {
+            "id": 4,
+            "savoir": "méthode assertIsString( )",
+            "detail": "Cette méthode vérifie qu’une valeur est une chaîne de caractère.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertisstring"
+        },
+        {
+            "id": 5,
+            "savoir": "méthode assertCount( )",
+            "detail": "Cette méthode vérifie qu’un certains nombre d’éléments sont présents.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertcount"
+        },
+        {
+            "id": 6,
+            "savoir": "méthode assertSame( )",
+            "detail": "Cette méthode vérifie que deux valeurs sont de même type et égale.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertsame"
+        },
+        {
+            "id": 7,
+            "savoir": "méthode assertSame( )",
+            "detail": "Cette méthode vérifie qu’un résultat est au format json.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertjson"
+        },
+        {
+            "id": 8,
+            "savoir": "méthode assertNull( )",
+            "detail": "Cette méthode vérifie qu’un résultat est au null.",
+            "video": "https://placehold.co/150x150",
+            "source": "https://docs.phpunit.de/en/11.5/assertions.html#assertnull"
+        }
+    ],
+    "missionCards": [
+        {
+            "id": 1,
+            "requirement": "'Savoir #1'",
+            "instruction": "Suivre la documentation de PHPunit pour réaliser son premier test.",
+            "link": "https://docs.phpunit.de/en/11.5/writing-tests-for-phpunit.html"
+        },
+        {
+            "id": 2,
+            "requirement": "'Savoir #2'",
+            "instruction": "Tester les méthodes de la classe “Bouncer (videur de soirée)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/Bouncer.php"
+        },
+        {
+            "id": 3,
+            "requirement": "'Savoir #3'",
+            "instruction": "Tester les méthodes de la classe “Zodiac calendar (calendrier zodiaque chinois)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/ZodiacCalendar.php"
+        },
+        {
+            "id": 4,
+            "requirement": "'Savoir #4'",
+            "instruction": "Tester les méthodes de la classe “Fortune Teller (disseuse de bonnes aventures)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/FortuneTeller.php"
+        },
+        {
+            "id": 5,
+            "requirement": "'Savoir #5'",
+            "instruction": "Tester les méthodes de la classe “Dupplicator (machine à duppliquer)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/Dupplicator.php"
+        },
+        {
+            "id": 6,
+            "requirement": "'Savoir #6'",
+            "instruction": "Tester les méthodes de la classe Product (produits)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/Product.php"
+        },
+        {
+            "id": 7,
+            "requirement": "'Savoir #7'",
+            "instruction": "Tester les méthodes de la classe ApiFetcher (récupérateur d'API)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/ApiClient.php"
+        },
+        {
+            "id": 8,
+            "requirement": "'Savoir #8'",
+            "instruction": "Tester les méthodes de la classe SimplifyCart (Panier simplifié)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/SimplifyCart.php"
+        },
+        {
+            "id": 9,
+            "requirement": "'Savoir #?'",
+            "instruction": "Tester les méthodes de la classe Order (Commande)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/Order.php"
+        },
+        {
+            "id": 10,
+            "requirement": "'Savoir #?'",
+            "instruction": "Tester les méthodes de la classe User (Utilisateur)”",
+            "link": "https://github.com/fredericEducentre/PHPunit_missions/blob/main/src/User.php"
+        }
+    ]
+}
