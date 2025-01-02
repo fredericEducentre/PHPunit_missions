@@ -21,11 +21,16 @@ class SimplifyCart
     {
         return $this->products;
     }
+
+    public function clearProducts() {
+        $this->products = null;
+    }
 }
 
 /*
 $cart = new SimplifyCart();
 $cart->addProduct("Green short", 20);
 $cart->addProduct("Sunglasses", 5);
+$cart->clearProducts();
 var_dump($cart->getProducts());
 */
